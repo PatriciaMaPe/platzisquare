@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PlatziSquare';
   isReady = false;
+  name:string = '';
 
   constructor(){
     setTimeout(() => {
@@ -16,6 +17,6 @@ export class AppComponent {
   }
 
   doSomething(){
-    alert("Doing something!");
+    alert('Doing something!');
   }
 }

@@ -8,6 +8,9 @@
 
 <hr>
 <button type="button" [disabled]="!isReady" (click)="doSomething()">Click me!</button>
-
+<hr>
+<input type="text" placeholder="Your name" [(ngModel)]="name">
+<br>
+<p>My name is {{name}}</p>
 
 <router-outlet></router-outlet>
