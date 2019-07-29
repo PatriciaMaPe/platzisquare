@@ -7,16 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PlatziSquare';
-  isReady = false;
-  name:string = '';
+  places:any = [
+    {name:'Flower shop Gardenia'},
+    {name:'Bakery Dona'},
+    {name:'Veterinary Little paws'}
+  ];
 
   constructor(){
-    setTimeout(() => {
-      this.isReady = true;
-    }, 3000)
+
   }
 
-  doSomething(){
-    alert('Doing something!');
-  }
 }
