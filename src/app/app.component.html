@@ -7,7 +7,7 @@
 </div>
 
 <hr>
-<button type="button" [disabled]="!isReady">Click me!</button>
+<button type="button" [disabled]="!isReady" (click)="doSomething()">Click me!</button>
 
 
 <router-outlet></router-outlet>

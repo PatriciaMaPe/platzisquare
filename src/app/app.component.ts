@@ -14,4 +14,8 @@ export class AppComponent {
       this.isReady = true;
     }, 3000)
   }
+
+  doSomething(){
+    alert("Doing something!");
+  }
 }
