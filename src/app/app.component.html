@@ -9,3 +9,9 @@
     <li *ngIf="place.active">{{place.name}}</li>
   </ng-container>
 </ul>
+
+<ul>
+  <ng-container *ngFor="let place of places; let i = index">
+    <li [ngStyle]="{ color : (place.active) ? 'black' : 'gray' }" [ngClass]="{par_row : (i+1)%2 !== 0}">{{ place.name }}</li>
+  </ng-container>
+</ul>
