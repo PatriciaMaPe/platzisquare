@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
 
+import {StandOutDirective} from "./directives/standout.directive"
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StandOutDirective
   ],
   imports: [
     BrowserModule,
