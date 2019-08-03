@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 
 import {StandOutDirective} from "./directives/standout.directive"
+import {CountClicksDirective} from "./directives/count-clicks.directive"
 
 @NgModule({
   declarations: [
     AppComponent,
-    StandOutDirective
+    StandOutDirective,
+    CountClicksDirective
   ],
   imports: [
     BrowserModule,
