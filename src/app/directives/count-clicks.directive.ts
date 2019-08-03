@@ -1,15 +1,17 @@
-import {Directive, HostListener} from "@angular/core";
+import {Directive, HostListener, HostBinding} from "@angular/core";
 
 @Directive({
-  selector: 'a[count-clicks]' //solamente aplica par ancors (hipervinculos)
+  selector: 'li[count-clicks]' //only for anchor (hiperlinks)
 })
 
 
 export class CountClicksDirective{
   clicksNum = 0;
-  @HostListener('click', ['$event.target'] ) onClick(btn){
+  @HostBinding('style.opacity') opacity: number = .1
+  @HostListener('click', ['$event.target'] ) onClick(btn){ //the event is associate with the onClick
     console.log('a', btn, "Number of clicks: ", this.clicksNum++)
+    this.opacity += .1;
   }
-  //evento, lo que capturamos del evento, en que momento se dispara el evento,
+
 
 }

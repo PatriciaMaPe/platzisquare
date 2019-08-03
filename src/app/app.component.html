@@ -12,8 +12,8 @@
 
 <ul>
   <ng-container *ngFor="let place of places; let i = index" [ngSwitch]="place.proximity">
-    <a count-clicks>
-      <li [ngStyle]="{ color : (place.active) ? 'black' : 'gray' }" [ngClass]="{par_row : (i+1)%2 !== 0}" [standout]="place.plan">
+    <a> //without [] because the directive return nothing
+      <li count-clicks [ngStyle]="{ color : (place.active) ? 'black' : 'gray' }" [ngClass]="{par_row : (i+1)%2 !== 0}" [standout]="place.plan">
         {{ place.name }} -
         <span *ngSwitchCase="1" [ngStyle]="{color:'green'}">Closest</span>
         <span *ngSwitchCase="2" [ngStyle]="{color:'orange'}">Near</span>
