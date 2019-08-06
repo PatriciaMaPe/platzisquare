@@ -7,14 +7,25 @@ import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
 
-import {StandOutDirective} from "./directives/standout.directive"
-import {CountClicksDirective} from "./directives/count-clicks.directive"
+import {StandOutDirective} from "./directives/standout.directive";
+import {CountClicksDirective} from "./directives/count-clicks.directive";
+import {DetailComponent} from "./detail/detail.component";
+import {PlacesComponent} from "./places/places.component";
+import {Routes, RouterModule} from '@angular/router';
+
+const appRoutes: Routes = [
+  {path:'', component: PlacesComponent},
+  {path:'places', component: PlacesComponent},
+  {path:'detail', component: DetailComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     StandOutDirective,
-    CountClicksDirective
+    CountClicksDirective,
+    DetailComponent,
+    PlacesComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +33,8 @@ import {CountClicksDirective} from "./directives/count-clicks.directive"
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: ''
-    })
+    }),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
