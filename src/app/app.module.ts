@@ -11,12 +11,14 @@ import {StandOutDirective} from "./directives/standout.directive";
 import {CountClicksDirective} from "./directives/count-clicks.directive";
 import {DetailComponent} from "./detail/detail.component";
 import {PlacesComponent} from "./places/places.component";
+import {ContactComponent} from "./contact/contact.component";
 import {Routes, RouterModule} from '@angular/router';
 
 const appRoutes: Routes = [
   {path:'', component: PlacesComponent},
   {path:'places', component: PlacesComponent},
-  {path:'detail/:id', component: DetailComponent}
+  {path:'detail/:id', component: DetailComponent},
+  {path:'contact', component: ContactComponent}
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     StandOutDirective,
     CountClicksDirective,
     DetailComponent,
-    PlacesComponent
+    PlacesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
