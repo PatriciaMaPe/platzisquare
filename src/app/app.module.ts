@@ -14,6 +14,8 @@ import {PlacesComponent} from "./places/places.component";
 import {ContactComponent} from "./contact/contact.component";
 import {Routes, RouterModule} from '@angular/router';
 
+import {PlacesService} from './services/places.service';
+
 const appRoutes: Routes = [
   {path:'', component: PlacesComponent},
   {path:'places', component: PlacesComponent},
@@ -39,7 +41,7 @@ const appRoutes: Routes = [
     }),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [PlacesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
